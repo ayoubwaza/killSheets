@@ -1,14 +1,21 @@
-import React from 'react';
+import React,{lazy,Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+var App = lazy(() => import ('./App'));
+var Data = lazy(() => import ('./data'));
 
-import theme from './thme';
-import { ThemeProvider } from 'theme-ui';
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}><App/></ThemeProvider>
+    <Suspense fallback={<h1>loading...</h1>}>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={App}/>
+          <Route exact path="/data" component={Data}/>
+        </Switch>
+      </Router>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );
