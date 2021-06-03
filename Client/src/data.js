@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import {Link} from 'react-router-dom'
-import { FaTrash, FaEdit } from "react-icons/fa";
+import { FaTrash, FaEdit, FaPowerOff, FaWindowClose } from "react-icons/fa";
 import { Button,TextField } from '@material-ui/core';
 import styled, { createGlobalStyle } from 'styled-components';
 
@@ -34,6 +34,11 @@ var Child = styled.div`
     padding: 10px 0 10px 0;
     background: rgba(255,255,255,0.23);
     backdrop-filter: blur(50px);
+    i{
+      cursor: pointer;
+      font-size: 23px;
+      color: red;
+    }
     div{
       margin-bottom: 10px;
     }
@@ -56,7 +61,7 @@ function Data(props) {
         })
         .catch((err) => console.log(err));
         setTimer(true)
-    }, 70000);
+    }, 7000);
   });
   //delete user
     const deleteUser = (id) => {
@@ -121,10 +126,14 @@ function Data(props) {
   };
   return (
     <div className="__Def">
+      <GlobalStyle/>
         {
             formC ? (
                 <Child>
         <h2>React w/ googleSheet</h2>
+        <div>
+          <i><FaWindowClose onClick={() => setFormc(!formC)}/></i>
+        </div>
         <div>
           <TextField id="outlined-basic" variant="outlined"  label="Name" type="text" value={name}  onChange={(e) => setName(e.target.value)}/>
         </div>
