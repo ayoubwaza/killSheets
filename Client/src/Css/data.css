@@ -1,0 +1,86 @@
+.flx__btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.data__excel_btn{
+    background: rgb(88, 213, 88);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 200px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+}
+#pdf{
+    padding: 10px;
+    background: red;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 200px;
+    margin: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.data__Section{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right,rgba(0,0,2,.7),rgba(255,255,255,.7));
+    margin: 0%;
+    padding: 0%;
+}
+.data_Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 5px 0 rgb(0, 2, 0);
+    width: 500px;
+    padding: 10px 0 10px 0;
+    background: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(50px);
+    transition: 400ms ease-in-out;
+}
+.data_Container i{
+    color: red;
+    font-size: 23px;
+    cursor: pointer;
+}
+.data_Container div{
+    margin-bottom: 10px;
+}
+.__Def{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  table{
+    border-collapse: collapse;
+    width: 100%;
+  }
+  table th , td{
+    border: 4px solid rgb(0, 2, 0);
+    text-align: center;
+    cursor: pointer;
+  }
+  table th{
+    padding: 10px;
+    background: yellow;
+  }
+  table td{
+    padding: 10px;
+  }

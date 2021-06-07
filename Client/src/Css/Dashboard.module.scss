@@ -1,0 +1,176 @@
+.App__Dash{
+    display: flex;
+}
+@mixin  centeredCompo(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin  Space(){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+._princi__Dash{
+    margin-left: 300px;
+    width: 100%;
+    @include centeredCompo();
+    .__parent__Dash{
+        @include centeredCompo();
+        flex-direction: column;
+        width: 100%;
+    }
+    .__three_statis__Dash{
+        @include Space  ();
+        width: 80%;
+        .__all_three{
+            padding: 10px;
+            width: 250px;
+            border-radius: 20px;
+            transition: 400ms ease-in-out;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 0 5px 0 5px;
+            &:hover{
+                transform: scale(1.1);
+            }
+           
+        }
+        .__firstOne{
+            background: rgb(199, 70, 199);
+        }
+        .__secondOne{
+            background: red;
+        }
+        .__thirdone{
+            background: deeppink;
+        }
+        .__fourthOne{
+            background: skyblue;
+        }
+    }
+}
+.__princi__Title{
+   @include Space();
+   width: 100%;
+   margin-bottom: 10px;
+   span{
+       font-size: 30px;
+       position: relative;
+       top: 5px;
+       cursor: pointer;
+   }
+   .__bars{
+      margin: 0%;
+      padding: 0%;
+      cursor: pointer;
+      &:hover .__each_barMiddel{
+        width: 80px;
+      }
+      .__each_bar{
+          width: 80px;
+          height: 6px;
+          background:rgb(0,2,0);
+          border-radius: 20px;
+          margin: 4px 0 4px 0;
+          cursor: pointer;
+      }
+      .__each_barMiddel{
+        width: 60px;
+        height: 6px;
+        background:rgb(0,2,0);
+        border-radius: 20px;
+        transition: 400ms ease-out ;
+      }
+   }
+}
+
+//aside
+.Aside__Dash{
+    position: fixed;
+    background: #000;
+    color: white;
+    width: 300px;
+    text-align: center;
+    left: 0%;
+    bottom: 0%;
+    top: 0;
+    cursor: pointer;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: "K2D",serif;
+    img{
+        object-fit: cover;
+        filter: drop-shadow(0 5px 5px rgb(225, 235, 225));
+        border-radius: 30px;
+    }
+}
+.__Child__As{
+    @include centeredCompo();
+    flex-direction: column;
+    width: 100%;
+}
+.__handle__aside__labels{
+    margin: 10px 0 10px 0;
+    h4{
+        margin: 0px ;
+        padding-left: 7px;
+        transition: 400ms ease-in;
+        &:hover {
+            border-left: 5px solid rgb(3, 146, 255);
+            color: skyblue;
+            transform: scale(1.1);
+        }
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    h6{
+        font-size: 15px;
+        transition: 400ms ease-out;
+        &:hover{
+            transform: scale(1.1);
+        }
+        margin: 10px 0% 10px 0%;
+    }
+    i{
+        margin-right: 10px;
+    }
+    span{
+        margin-left: 10px;
+        position: relative;
+        top: 7px;
+        font-size: 25px;
+    }
+}
+.__handle__aside__labels_clt{
+    i{
+        position: relative;
+        left: -5px;
+    }
+    span{
+        left: 3px;
+    }
+    h4{
+        padding-left: 15px;
+    }
+}
+.__handle__aside__labels_stoCk{
+    i{
+        position: relative;
+        left: -22px;
+    }
+    span{
+        left: 2px;
+    }
+    h4{
+        padding-left: 25px;
+    }
+}
+.__labels__Child{
+    width: 100%;
+}

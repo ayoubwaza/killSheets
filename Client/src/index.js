@@ -3,16 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
 var App = lazy(() => import ('./App'));
 var Data = lazy(() => import ('./data'));
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<h1>loading...</h1>}>
+    <Suspense fallback={false}>
       <Router>
         <Switch>
           <Route exact path="/" component={App}/>
           <Route exact path="/data" component={Data}/>
+          <Route exact path="/dashboard" component={Dashboard}/>
         </Switch>
       </Router>
     </Suspense>
